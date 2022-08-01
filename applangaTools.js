@@ -197,4 +197,11 @@ function finalizeToken(str) {
     
 }
 
-module.exports = {captureScreenshot,readAPIToken,validateAndfindAppId,finalizeToken};
+function getAPIToken() {
+    let key = readAPIToken()
+    let token = finalizeToken(key)
+
+    return token
+}
+
+module.exports = {captureScreenshot,getAPIToken,validateAndfindAppId};
